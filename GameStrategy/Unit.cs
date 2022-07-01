@@ -1,6 +1,7 @@
-﻿public class Unit
+﻿using static TypesAndRacesEnumFiles;
+public class Unit
 {
-    public TypesAndRacesEnumFiles.Race Race { get; set; }
+    public Race Race { get; set; }
 	public int Cost { get; set; }
 	public int Health { get; set; }
 	public int Damage { get; set; }
@@ -10,7 +11,7 @@
 	public int CritChance { get; set; }
 	public bool Flying { get; set; }
 
-	public Unit(TypesAndRacesEnumFiles.Race race, int cost, int health, int damage, int armor, int attackSpeed, int attackRange, int critChance, bool flying)
+	public Unit(Race race, int cost, int health, int damage, int armor, int attackSpeed, int attackRange, int critChance, bool flying)
 	{
         Race = race;
 		Cost = cost;
