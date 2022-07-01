@@ -2,12 +2,11 @@
 public class MagicalTypeUnit : Unit
 {	
 	public MagicalType MagicalType { set; get; }
-
 	public int Mana { set; get; }
 	public int CastSpeed { set; get; }
 
-	public MagicalTypeUnit(Race race, int cost, int health, int damage, int armor, int attackSpeed, int attackRange, int critChance, bool flying, MagicalType magicalType, int mana, int castSpeed)
-		: base(race, cost, health, damage, armor, attackSpeed, attackRange, critChance, flying)
+	public MagicalTypeUnit(Race race, int cost, int health, int damage, int survival, MagicalType magicalType, int mana, int castSpeed)
+		: base(race, cost, health, damage, survival)
 	{
 		MagicalType = magicalType;
 		Mana = mana;

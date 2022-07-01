@@ -5,36 +5,22 @@ public class Unit
 	public int Cost { get; set; }
 	public int Health { get; set; }
 	public int Damage { get; set; }
-	public int Armor { get; set; }
-	public int AttackSpeed { get; set; }
-	public int AttackRange { get; set; }
-	public int CritChance { get; set; }
-	public bool Flying { get; set; }
+	public int Survival { get; set; }
+	
 
-	public Unit(Race race, int cost, int health, int damage, int armor, int attackSpeed, int attackRange, int critChance, bool flying)
+	public Unit(Race race, int cost, int health, int damage, int survival)
 	{
         Race = race;
 		Cost = cost;
 		Health = health;
 		Damage = damage;
-		Armor = armor;
-		AttackSpeed = attackSpeed;
-		AttackRange = attackRange;
-		CritChance = critChance;
-		Flying = flying;
+		Survival = survival;
 	}
 
 	public override string ToString()
 	{
-		string unitInfo = $"Race: {Race}, Cost: {Cost}, Health: {Health}, Damage: {Damage}, Armor: {Armor}, Attack Speed: {AttackSpeed}, Attack Range: {AttackRange}, Crit Chance: {CritChance}";
-		if (Flying == true)
-		{
-			unitInfo = unitInfo + ", Unit can fly";
-		}
-		else
-		{
-			unitInfo = unitInfo + ", Unit cannot fly";
-		}
+		string unitInfo = $"Race: {Race}, Cost: {Cost}, Health: {Health}, Damage: {Damage}, Survival: {Survival}";
+
 		return unitInfo;
 	}
 }

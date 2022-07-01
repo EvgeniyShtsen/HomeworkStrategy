@@ -1,5 +1,32 @@
 ﻿public class Army
 {
+	public static int CalculateTotalDamage(List<Unit> units)
+    {
+		int totalDamage = 0;
+		foreach (Unit unit in units)
+        {
+			totalDamage += unit.Damage;
+        }
+		return totalDamage;
+    }
+	public static int CalculateTotalHealth(List<Unit> units)
+	{
+		int totalHealth = 0;
+		foreach (Unit unit in units)
+		{
+			totalHealth += unit.Health;
+		}
+		return totalHealth;
+	}
+	public static int CalculateTotalSurvival(List<Unit> units)
+	{
+		int totalSurvival = 0;
+		foreach (Unit unit in units)
+		{
+			totalSurvival += unit.Survival;
+		}
+		return totalSurvival;
+	}
 	public static long CalculateArmyCost(List<Unit> units)
 	{
 		long sum = 0;
