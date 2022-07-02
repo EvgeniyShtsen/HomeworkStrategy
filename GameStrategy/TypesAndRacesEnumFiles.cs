@@ -1,30 +1,33 @@
-﻿public class TypesAndRacesEnumFiles
+﻿namespace GameStrategy
 {
-	public enum RangeType
+	public class TypesAndRacesEnumFiles
 	{
-		Archer,
-		Gunner,
-		Hunter,
-	}
-	public enum MeleeType
-	{
-		Warrior,
-		Knight,
-		Berserker,
-	}
-	public enum MagicalType
-	{
-		Wizard,
-		Bard,
-		Summoner,
-	}
-	public enum Race
-	{
-		Human,
-		Elf,
-		Dwarf,
-		Orc,
-		Furry,
-		Hobbit,
+		public enum RangeType
+		{
+			Archer,
+			Gunner,
+			Hunter,
+		}
+		public enum MeleeType
+		{
+			Warrior,
+			Knight,
+			Berserker,
+		}
+		public enum MagicalType
+		{
+			Wizard,
+			Bard,
+			Summoner,
+		}
+		public enum Race
+		{
+			Human,
+			Elf,
+			Dwarf,
+			Orc,
+			Furry,
+			Hobbit,
+		}
 	}
 }

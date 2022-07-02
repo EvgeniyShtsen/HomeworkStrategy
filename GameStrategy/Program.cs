@@ -1,4 +1,4 @@
-﻿using static TypesAndRacesEnumFiles;
+﻿using static GameStrategy.TypesAndRacesEnumFiles;
 
 namespace GameStrategy
 {
