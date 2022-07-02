@@ -5,11 +5,12 @@ namespace GameStrategy
 	public class Unit
 	{
 		public Race Race { get; set; }
-		public int Cost { get; set; }
+		public int Cost { get; }
 		public int Health { get; set; }
 		public int Damage { get; set; }
 		public int Survival { get; set; }
 
+		
 
 		public Unit(Race race, int cost, int health, int damage, int survival)
 		{

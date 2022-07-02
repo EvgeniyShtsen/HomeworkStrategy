@@ -17,7 +17,7 @@ namespace GameStrategy
 		}
 		public override string ToString()
 		{
-			return "Magical Unit: " + $"Type: {MagicalType}, " + base.ToString() + $", Mana: {Mana}, CastSpeed: {CastSpeed}";
+			return "Magical unit: " + $"Type: {MagicalType}, " + base.ToString() + $", Mana: {Mana}, CastSpeed: {CastSpeed}";
 		}
 	}
 }

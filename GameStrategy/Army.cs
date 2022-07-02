@@ -1,6 +1,6 @@
 ﻿namespace GameStrategy
 {
-	public class Army
+	public abstract class Army
 	{
 		public static int CalculateTotalDamage(List<Unit> units)
 		{
@@ -67,5 +67,35 @@
 			}
 			return unitSelection;
 		}
-	}
+
+        public static object CalculateTotalHealth(List<EnemyUnit> enemyArmy)
+        {
+			int totalHealth = 0;
+			foreach (EnemyUnit enemyUnit in enemyArmy)
+			{
+				totalHealth += enemyUnit.Health;
+			}
+			return totalHealth;
+		}
+
+        public static object CalculateTotalDamage(List<EnemyUnit> enemyArmy)
+        {
+			int totalDamage = 0;
+			foreach (EnemyUnit enemyUnit in enemyArmy)
+			{
+				totalDamage += enemyUnit.Damage;
+			}
+			return totalDamage;
+		}
+
+        public static object CalculateTotalSurvival(List<EnemyUnit> enemyArmy)
+        {
+			int totalSurvival = 0;
+			foreach (EnemyUnit enemyUnit in enemyArmy)
+			{
+				totalSurvival += enemyUnit.Survival;
+			}
+			return totalSurvival;
+		}
+    }
 }

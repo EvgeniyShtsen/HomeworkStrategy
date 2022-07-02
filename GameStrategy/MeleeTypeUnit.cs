@@ -17,7 +17,7 @@ namespace GameStrategy
 		}
 		public override string ToString()
 		{
-			return "Melee Range Unit: " + $"Type: {MeleeType}, " + base.ToString() + $", Stamina: {Stamina}, Double Attack Chance: {DoubleAttackChance}";
+			return "Melee unit: " + $"Type: {MeleeType}, " + base.ToString() + $", Stamina: {Stamina}, Double Attack Chance: {DoubleAttackChance}";
 		}
 	}
 }

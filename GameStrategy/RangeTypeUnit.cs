@@ -17,8 +17,7 @@ namespace GameStrategy
 		}
 		public override string ToString()
 		{
-			return "Long Range Unit: " + $"Type: {RangeType}, " + base.ToString() + $", Stock of arrows: {Arrows}, Bleeding Chance: {BleedingChance}";
+			return "Range unit: " + $"Type: {RangeType}, " + base.ToString() + $", Stock of arrows: {Arrows}, Bleeding Chance: {BleedingChance}";
 		}
-
 	}
 }
