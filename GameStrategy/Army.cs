@@ -16,7 +16,7 @@
 			int totalHealth = 0;
 			foreach (Unit unit in units)
 			{
-				totalHealth += unit.Health;
+				totalHealth += unit.Health + (unit.Survival*5);
 			}
 			return totalHealth;
 		}
@@ -68,17 +68,17 @@
 			return unitSelection;
 		}
 
-        public static object CalculateTotalHealth(List<EnemyUnit> enemyArmy)
+        public static int CalculateTotalHealth(List<EnemyUnit> enemyArmy)
         {
 			int totalHealth = 0;
 			foreach (EnemyUnit enemyUnit in enemyArmy)
 			{
-				totalHealth += enemyUnit.Health;
+				totalHealth += enemyUnit.Health + (enemyUnit.Survival * 7);
 			}
 			return totalHealth;
 		}
 
-        public static object CalculateTotalDamage(List<EnemyUnit> enemyArmy)
+        public static int CalculateTotalDamage(List<EnemyUnit> enemyArmy)
         {
 			int totalDamage = 0;
 			foreach (EnemyUnit enemyUnit in enemyArmy)
@@ -88,7 +88,7 @@
 			return totalDamage;
 		}
 
-        public static object CalculateTotalSurvival(List<EnemyUnit> enemyArmy)
+        public static int CalculateTotalSurvival(List<EnemyUnit> enemyArmy)
         {
 			int totalSurvival = 0;
 			foreach (EnemyUnit enemyUnit in enemyArmy)

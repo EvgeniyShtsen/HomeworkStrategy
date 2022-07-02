@@ -2,7 +2,7 @@
 
 namespace GameStrategy
 {
-	public class MeleeTypeUnit : Unit
+	public class MeleeTypeUnit : Unit, IUnitAttack
 	{
 		public MeleeType MeleeType { get; set; }
 		public int Stamina { get; set; }
@@ -19,5 +19,10 @@ namespace GameStrategy
 		{
 			return "Melee unit: " + $"Type: {MeleeType}, " + base.ToString() + $", Stamina: {Stamina}, Double Attack Chance: {DoubleAttackChance}";
 		}
-	}
+
+        public static void Attack()
+        {
+            Console.WriteLine("Warriors furiously break through the ranks of enemies...");
+        }
+    }
 }

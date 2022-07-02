@@ -2,7 +2,7 @@
 
 namespace GameStrategy
 {
-	public class MagicalTypeUnit : Unit
+	public class MagicalTypeUnit : Unit, IUnitAttack
 	{
 		public MagicalType MagicalType { set; get; }
 		public int Mana { set; get; }
@@ -19,5 +19,10 @@ namespace GameStrategy
 		{
 			return "Magical unit: " + $"Type: {MagicalType}, " + base.ToString() + $", Mana: {Mana}, CastSpeed: {CastSpeed}";
 		}
-	}
+
+        public static void Attack()
+        {
+			Console.WriteLine("Mages gather all their power in one crushing blow...");
+        }
+    }
 }

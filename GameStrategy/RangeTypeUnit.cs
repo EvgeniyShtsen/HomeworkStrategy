@@ -2,7 +2,7 @@
 
 namespace GameStrategy
 {
-	public class RangeTypeUnit : Unit
+	public class RangeTypeUnit : Unit, IUnitAttack
 	{
 		public RangeType RangeType { get; set; }
 		public int Arrows { get; set; }
@@ -19,5 +19,10 @@ namespace GameStrategy
 		{
 			return "Range unit: " + $"Type: {RangeType}, " + base.ToString() + $", Stock of arrows: {Arrows}, Bleeding Chance: {BleedingChance}";
 		}
-	}
+
+        public static void Attack()
+        {
+            Console.WriteLine("Shooters actively flood enemies with a hail of arrows...");
+        }
+    }
 }

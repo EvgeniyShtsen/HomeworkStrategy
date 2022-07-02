@@ -4,30 +4,30 @@
 	{
 		public enum RangeType
 		{
-			Archer = 1,
-			Gunner = 2,
-			Hunter = 3,
+			Archer,
+			Gunner,
+			Hunter,
 		}
 		public enum MeleeType
 		{
-			Warrior = 1,
-			Knight = 2,
-			Berserker = 3,
+			Warrior,
+			Knight,
+			Berserker,
 		}
 		public enum MagicalType
 		{
-			Wizard = 1,
-			Bard = 2,
-			Summoner = 3,
+			Wizard,
+			Bard,
+			Summoner,
 		}
 		public enum Race
 		{
-			Human = 1,
-			Elf = 2,
-			Dwarf = 3,
-			Orc = 4,
-			Furry = 5,
-			Hobbit = 6,
+			Human ,
+			Elf,
+			Dwarf,
+			Orc,
+			Furry,
+			Hobbit,
 		}
 	}
 }

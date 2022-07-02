@@ -18,11 +18,13 @@ namespace GameStrategy
 			{
 				Console.WriteLine(unit);
 			}
-
+			var yourArmyHealth = Army.CalculateTotalHealth(yourArmy);
+			var yourArmyDamage = Army.CalculateTotalDamage(yourArmy);
+			var yourArmySurvival = Army.CalculateTotalSurvival(yourArmy);
 			Console.WriteLine();
-			Console.WriteLine($"Total health of your army: {Army.CalculateTotalHealth(yourArmy)}");
-			Console.WriteLine($"Total damage of your army: {Army.CalculateTotalDamage(yourArmy)}");
-			Console.WriteLine($"Overall survivability potential of your army: {Army.CalculateTotalSurvival(yourArmy)}");
+			Console.WriteLine($"Total health of your army: {yourArmyHealth}");
+			Console.WriteLine($"Total damage of your army: {yourArmyDamage}");
+			Console.WriteLine($"Overall survivability potential of your army: {yourArmySurvival} (given bonus for max health +{yourArmySurvival*5})");
 			Console.WriteLine($"Army total cost is {Army.CalculateArmyCost(yourArmy)} coins");
 
 			Console.WriteLine();
@@ -62,10 +64,36 @@ namespace GameStrategy
 			{
 				Console.WriteLine(enemyUnit);
 			}
+			var enemyHealth = Army.CalculateTotalHealth(enemyArmy);
+			var enemyDamage = Army.CalculateTotalDamage(enemyArmy);
+			var enemySurvival = Army.CalculateTotalSurvival(enemyArmy);
+
 			Console.WriteLine();
-			Console.WriteLine($"Total health of enemy army: {Army.CalculateTotalHealth(enemyArmy)}");
-			Console.WriteLine($"Total damage of enemy army: {Army.CalculateTotalDamage(enemyArmy)}");
-			Console.WriteLine($"Overall survivability potential of enemy army: {Army.CalculateTotalSurvival(enemyArmy)}");
+			Console.WriteLine($"Total health of enemy army: {enemyHealth}");
+			Console.WriteLine($"Total damage of enemy army: {enemyDamage}");
+			Console.WriteLine($"Overall survivability potential of enemy army: {enemySurvival} (given bonus for max health +{enemySurvival*7})");
+			Console.WriteLine();
+
+			var yourArmyPotencial = yourArmyDamage + yourArmyHealth - enemySurvival;
+			var emenyArmyPotencial = enemyDamage + enemyHealth - yourArmySurvival;
+			Console.WriteLine();
+			Console.WriteLine($"Total power of your army: {yourArmyPotencial}");
+			Console.WriteLine($"Total power of your enemies: {emenyArmyPotencial}");
+			Console.WriteLine("Lets battle!");
+			Console.WriteLine();
+			if (yourArmyPotencial > emenyArmyPotencial)
+            {
+				MeleeTypeUnit.Attack();
+				RangeTypeUnit.Attack();
+				MagicalTypeUnit.Attack();
+				Console.WriteLine("YOU WON ALL ENEMIES!");
+            }
+            else
+            {
+				EnemyUnit.Attack();
+				Console.WriteLine("Enemies have reduced your army to ashes :(");
+				Console.WriteLine("Try Again...");
+            }
 		}
 	}
 }
